@@ -1,0 +1,51 @@
+#btn {
+	display: none;
+}
+
+label[for="btn"] {
+	display: block;
+	margin-left: 42%;
+	width: 15%;
+	padding-bottom: 0.4%;
+	padding-top: 0.6%;
+	color: powderblue;
+	text-align: center;
+	font-size: 25px;
+}
+
+ul {
+	width: 20em;
+	margin-left:	42%;
+	margin-right:	auto;
+}
+li {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: azure;
+	font-size: 20px;
+	padding-left: 10%;
+}
+
+li:hover {
+	overflow: visible;
+	color: white;
+}
+
+.urls {
+	display: none;
+}
+
+label:hover {
+	cursor: pointer;
+}
+
+label:after {
+	content: "\25B6";
+}
+
+#btn:checked + label:after {
+	content: "\25bc";
+}
+#btn:checked + label + .urls {
+	display: block;
+}

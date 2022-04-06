@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+		<meta charset="UTF-8">
+		<title>Public URLs</title>
+		<link rel="stylesheet" href="pages/style.css">
+		<link rel="stylesheet" href="pages/publicUrls.css">
+		
+	</head>
+
+	<body>
+
+		{{if .URLs }}
+		<input type="checkbox" id="btn" checked=true/>
+		<label for="btn" unselectable="yes">Saved URLs: </label>
+		<div class="urls">
+			<ul>
+			{{ range .URLs}}
+			<li>{{ . }}</li> 
+			{{end}}
+			</ul>
+			{{else}}
+				<h3>No URLs yet</h3>
+			{{end}}
+		</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,12 @@
+#urls a:link, a:visited, a:active {
+	color: red;	
+}
+
+#urls a:hover {
+	color: powderblue;
+}
+
+#urls {
+	color: white;
+	text-align: center;
+}
