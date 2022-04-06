@@ -1,12 +1,42 @@
-#urls a:link, a:visited, a:active {
-	color: red;	
+* {
+	 margin: 0;
+ }
+
+body {
+	background-color: #2d343d;
 }
 
-#urls a:hover {
+.header {
+	font-size: 2rem;
+	text-align: center;
+
+	background-color: #217d52;
+
+	padding-top: .5em;
+	padding-bottom: .5em;
+
+}
+
+
+.header a:link, a:visited, a:active {
+	color: white;	
+}
+
+.header a:hover {
 	color: powderblue;
 }
 
-#urls {
-	color: white;
-	text-align: center;
+.header a + a {
+	padding-left: .5em;
 }
+
+
+h1 {
+	font-size: 3rem;
+	color: #8bc4dd;
+	text-align: center;
+
+	padding-top: 1em;
+
+}
+

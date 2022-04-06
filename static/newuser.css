@@ -1,0 +1,63 @@
+body {
+	background-color: #2d343d;
+	font-size: 1.25rem;
+	font-family: sans-serif;
+
+	text-align: center;
+
+	margin-top: 5em;
+}
+
+h1 {
+	color: #8bc4dd;
+	margin-bottom: 2em;
+}
+
+input {
+	font-size: 1.25rem;
+	font-family: sans-serif;
+	
+	color: azure;
+	background-color: #1c2023;
+	border: none;
+
+	padding: 1em 1em;
+	margin-bottom: 1em;
+
+	border-radius: .3em;
+}
+
+input:focus {
+	outline: azure solid .1em;
+}
+
+input:focus::placeholder {
+	color: transparent;
+}
+
+input[type="text"], input[type="password"] {
+	width: 20em;
+}
+
+input[type=submit] {
+	-webkit-appearance: none;
+	cursor: pointer;
+	width: auto;
+	padding: 1em 2em;
+
+	color: white;
+}
+input[type=submit]:focus, input[type=submit]:hover{
+	background-color: #15181a;
+	outline: azure solid .1em;
+}
+
+input::placeholder {
+	color: darkgrey;
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:active {
+	-webkit-text-fill-color: azure !important;
+	-webkit-box-shadow: 0 0 0 2em #1c2023 inset !important;
+	caret-color: azure;
+}

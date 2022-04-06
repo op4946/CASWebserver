@@ -1,57 +1,84 @@
 <!DOCTYPE html>
 <style type="text/css">
 
-	html {
-		background-color: #596878;
+	* {
+		box-sizing: border-box;
+	}
+
+	.col-1 {
+		margin: auto;
+		margin-top: 10%; 
+	}
+
+	@media only screen and (max-width: 768px) {
+		[class*="col-"] {
+			width: 100%;
+		}
+	}
+
+	@media only screen and (min-width: 768px) {
+		[class*="col-"] {
+			width: 75%;
+		}
+	}
+	@media only screen and (min-width: 992px) {
+		[class*="col-"] {
+			width: 25%;
+		}
 	}
 
 	h1 {
-		color: powderblue;
+		color: #8bc4dd;
+		font-size: 3rem;
+		
 		text-align: center;
-		margin-top: 2%;
 	}
 
-	form {
-		margin-top: 2%;
-		margin-left: 43%;
-	}
-	
 	input {
-		background-color: #2a3036;
-		color: white;
+		color: azure;
+		font-size: 1.25rem;
+		font-family: sans-serif;
+
+		width: 100%;
+
+		background-color: #1c2023;
 		border: none;
-		border-radius: 3px;
-		padding: 5px 10px;
-		font-size: 1rem;
-		height: 1.5em;
+		border-radius: .3em;
+
+		padding: 1em;
 	}
-	
-/* Why Chromium!!! */
-	input:-webkit-autofill, input:-webkit-autofill::first-line, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
-		-webkit-text-fill-color: white !important;
-		-webkit-box-shadow: 0 0 0 30px #2a3036 inset !important;
+
+	input::placeholder {
+		color: darkgrey;
+	}
+
+	html {
+		background-color: #2d343d;
+		font-family: sans-serif;
+	}
+
+	input:-webkit-autofill {
+		-webkit-text-fill-color: azure !important;
+		-webkit-box-shadow: 0 0 0 2em #1c2023 inset !important;
 		caret-color: white;
-		font-size: 1rem;
 	}
-
-	::placeholder {
-		color: white;
-	}
-
 </style>
 
 <html>
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Save URL</title>
 </head>
 
 <body>
-	<h1>Save New Url</h1>
-	<form action="/saveurl" method="post">
-		<input type="text" placeholder="Enter the URL" name="URL"><br>
-	</form>
+	<div class="col-1">
+		<h1>Save Url</h1>
+		<form action="/saveurl" method="post">
+			<input type="text" placeholder="Enter URL" name="URL"><br>
+		</form>
+	</div>
 </body>
 
 </html>

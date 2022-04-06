@@ -5,27 +5,30 @@
 
 		<meta charset="UTF-8">
 		<title>Public URLs</title>
-		<link rel="stylesheet" href="pages/style.css">
-		<link rel="stylesheet" href="pages/publicUrls.css">
+		<link rel="stylesheet" href="/pages/style.css">
+		<link rel="stylesheet" href="/pages/publicUrls.css">
 		
 	</head>
 
 	<body>
+		<div class="col-1">
+			{{if .URLs }}
+			<input type="checkbox" id="btn" checked=true/>
+			<label for="btn">Saved Urls:</label>
+			<div class="urls">
 
-		{{if .URLs }}
-		<input type="checkbox" id="btn" checked=true/>
-		<label for="btn" unselectable="yes">Saved URLs: </label>
-		<div class="urls">
-			<ul>
-			{{ range .URLs}}
-			<li>{{ . }}</li> 
-			{{end}}
-			</ul>
+				<ul>
+				{{ range .URLs}}
+				<li>{{ . }}</li> 
+				{{end}}
+				</ul>
+
+				<a href="/saveurl" id="addPlus">+</a>
+			</div>
 			{{else}}
-				<h3>No URLs yet</h3>
+			<h3>No URLs yet</h3>
 			{{end}}
 		</div>
-
 	</body>
 
 </html>
