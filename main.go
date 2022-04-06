@@ -14,6 +14,7 @@ func Index(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 func main() {
 	router := httprouter.New()// Init httprouter
 	router.GET("/", Index)
+	router.ServeFiles("/pages/*filepath", http.Dir("./static"))
 
 	fmt.Println("Server started on localhost:8080")// Notifies me that its finished compiling
 	http.ListenAndServe("localhost:8080", router);// Start server on localhost:8080
