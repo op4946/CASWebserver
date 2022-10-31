@@ -5,23 +5,23 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Home</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="/pages/style.css">
 		<link rel="stylesheet" href="/pages/home.css">
 	</head>
 
-
 	<body>
+{{template "header.html" .LoggedIn }}
 
-		<div class="header">
-
-			<a href="/pages/saveurl">Save url</a>
-			<a href="/login">Login</a>
-
-		</div>
-
-		<h1 id="welcome">Welcome.</h1>
-		
+	<h1>Most Popular URLs</h1>
+	{{ range .URLs }}
+	<li>{{ . }}</li>
+	{{ end }}
+	{{ if .LoggedIn }}
+	<h1>Most Popular Users</h1>
+	{{ range .Users }}
+	<li><a href="/users/{{ . }}">{{ . }}</a></li>
+	{{ end }} {{ end }}
 	</body>
-
 
 </html>

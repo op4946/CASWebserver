@@ -1,10 +1,6 @@
-* {
-	box-sizing: border-box;
-}
-
 .col-1 {
 	margin: auto;
-	margin-top: 10%;
+	margin-top: 5%;
 
 	text-align: center;
 }
@@ -13,17 +9,35 @@
 	[class*="col-"] {
 		width: 100%;
 	}
+	body {
+		font-size: 1.25em;
+	}
+	#addPlus {
+		font-size: 2rem;
+	}
 }
 
 @media only screen and (min-width: 768px) {
 	[class*="col-"] {
 		width: 75%;
 	}
+	body {
+		font-size: 2rem;
+	}
+	#addPlus {
+		font-size: 5rem;
+	}
 }
 
 @media only screen and (min-width: 992px) {
 	[class*="col-"] {
-		width: 40%;
+		width: 50%;
+	}
+	body {
+		font-size: 1.75rem;
+	}
+	#addPlus {
+		font-size: 3rem;
 	}
 }
 
@@ -31,17 +45,16 @@
 	[class*="col-"] {
 		width: 25%;
 	}
+	body {
+		font-size: 1.25rem;
+	}
+	#addPlus {
+		font-size: 3rem;
+	}
 }
 
 #btn {
 	display: none;
-}
-
-body {
-	font-size: 1.25rem;
-	font-family: sans-serif;
-
-	background-color: #2d343d;
 }
 
 label[for="btn"] {
@@ -49,15 +62,15 @@ label[for="btn"] {
 	font-size: 150%;
 	font-weight: bold;
 
-	background-color: #1c2023;
 	color: #8bc4dd;
 
 	border: solid #8bc4dd; 
 	border-radius: .1em;
 	border-width: .1em;
 
+	margin-bottom: 0.5em;
+
 	padding: .5em;
-	padding-left: 3em;
 
 	user-select: none;
 	-moz-user-select: none;
@@ -67,6 +80,11 @@ label[for="btn"] {
 
 ul {
 	padding: 0;
+	margin-left: 0.4em;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
 
 li {
@@ -75,16 +93,12 @@ li {
 	overflow: hidden;
 	color: azure;
 
-	background-color: #1c2023; 
-
 	border: solid azure; 
 	border-radius: .2em;
 	border-width: .05em;
 
 	padding: .5em;
 	margin-bottom: .5em;
-
-	width: 100%;
 }
 
 li:hover {
@@ -94,12 +108,13 @@ li:hover {
 
 .urls {
 	display: none;
-	margin-top: 2em;
 }
 
 h3 {
-	font-size: 1.5rem;
-	color: #8bc4dd;
+	font-size: 2rem;
+	color: #8bddab;
+	
+	margin-bottom: 1em;
 }
 
 label:hover {
@@ -109,30 +124,31 @@ label:hover {
 label:after {
 /*	Font independent arrow, so it is an arrow, everywhere */
 	content: "";
-
-	margin-left: 2em;
+	float: right;
+	margin-top: .3em;
 
 	display: inline-block;
 	border: solid #8bc4dd;
 	border-width: 0 .15em .15em 0;
 
 	padding: .20em;
-	margin-bottom: .1em;
 
 	transform: rotate(-45deg);
 }
 
 #btn:checked + label:after {
 	transform: rotate(45deg);
-	margin-bottom: .15em;
 }
 #btn:checked + label + .urls {
 	display: block;
 }
 
 #addPlus {
-	font-size: 3rem;
-	color: azure;
+	color: white;
 
 	text-decoration: none;
+}
+
+#labelChanger {
+	width: 25%;
 }

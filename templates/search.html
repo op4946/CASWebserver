@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Search</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/pages/style.css">
+		<link rel="stylesheet" href="/pages/search.css">
+
+	</head>
+
+	<body>
+{{template "header.html" . }}
+		<div class="col-1">
+		{{ if and (not .Users) (not .URLs) }}
+		<h2>No results found</h2>
+		{{ else }}
+		{{ if .Users }}
+		<h2>Users Found:</h2>
+			{{ range .Users }}
+			<a href="/users/{{ . }}">{{ . }}</a><br>
+		{{ end }} {{ end }}
+		{{ if .URLs }}
+		<h2>URLs Found:</h2>
+			{{ range $i, $url := .URLs }} {{ $uploader := index $.Uploader $i }}
+			<p>{{ $url }} | <a href="/users/{{ $uploader }}">{{ $uploader }}</a></p>
+		{{ end }} {{ end }}
+		{{ end }}
+		</div>
+
+	</body>
+
+</html>

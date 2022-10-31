@@ -1,0 +1,66 @@
+body {
+	font-family: sans-serif;
+	font-size: 1.25rem;
+}
+
+.content {
+	text-align: center;
+
+	margin-top: 5em;
+}
+
+h1 {
+	color: #8bc4dd;
+	margin-bottom: 2em; 
+}
+
+.content input {
+	font-size: 1.25rem;
+	font-family: sans-serif;
+
+	color: azure;
+	background-color: #1c2023;
+	border: none;
+
+	padding: 1em 1em;
+	margin-bottom: 1em;
+
+	border-radius: .3em;
+}
+
+.content input[type=submit] {
+	-webkit-appearance: none;
+	width: auto;
+	padding: 1em 2em;
+	cursor: pointer;
+
+	color: white;
+}
+
+.content input[type="text"], input[type="password"] {
+	width: 20em;
+}
+
+input::placeholder {
+	color: darkgrey;
+}
+
+input:focus::placeholder {
+	color: transparent;
+}
+
+.content input[type=submit]:focus, input[type=submit]:hover{
+	background-color: #15181a;
+	outline: azure solid .1em;
+}
+
+.content input:focus {
+	outline: white solid .1em;
+}
+
+/* Why Chromium!!! */
+input:-webkit-autofill, input:-webkit-autofill::first-line, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+	-webkit-text-fill-color: azure !important;
+	-webkit-box-shadow: 0 0 0 2em #1c2023 inset !important;
+	caret-color: azure;
+}

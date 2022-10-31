@@ -1,0 +1,18 @@
+.col-1 {
+	font-size: 1.5rem;
+	text-align: center;
+	color: white;
+
+	width: 50%;
+	margin: 0 auto;
+}
+
+.col-1 h2 {
+	color: #8bc4dd;
+
+	margin: 1em 0;
+}
+
+.col-1 a:link, a:visited, a:active {
+	color: white;	
+}

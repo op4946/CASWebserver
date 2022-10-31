@@ -1,0 +1,105 @@
+.col-1 {
+	margin: auto;
+	margin-top: 10%; 
+}
+
+@media only screen and (max-width: 768px) {
+	[class*="col-"] {
+		width: 100%;
+		margin-top: 8em;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	[class*="col-"] {
+		width: 75%;
+	}
+}
+@media only screen and (min-width: 992px) {
+	[class*="col-"] {
+		width: 25%;
+	}
+}
+
+h1 {
+	color: #8bc4dd;
+	font-size: 3rem;
+	
+	text-align: center;
+}
+
+.form-label {
+	white-space: nowrap;
+
+	font-size: 1.25rem;
+	font-weight: bold;
+	color: #8bc4dd;
+
+	margin-top: 1em;
+}
+
+.form-label select {
+	padding: 1em .5em;
+	background-color: #1c2023;
+	color: azure;
+	font-size: 1.25rem;
+	border: 0;
+	border-radius: .3em;
+	width: 108%;
+	-webkit-appearance: menulist-button;
+}
+
+.form-label option:hover {
+	background-color: green;
+}
+
+.form-label select:invalid option:not(:disabled) {
+	color: azure;
+}
+
+.form-label select:invalid {
+	color: #a9a9a9;
+}
+
+.form-label label {
+ -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+input {
+	color: azure;
+	font-size: 1.25rem;
+	font-family: sans-serif;
+
+	width: 100%;
+
+	background-color: #1c2023;
+	border: none;
+	border-radius: .3em;
+
+	padding: 1em;
+}
+
+input[type="submit"] {
+	cursor: pointer;
+}
+
+input::placeholder {
+	color: darkgrey;
+}
+
+input:-webkit-autofill {
+	-webkit-text-fill-color: azure !important;
+	-webkit-box-shadow: 0 0 0 2em #1c2023 inset !important;
+	caret-color: white;
+}
+
+.submit-button {
+	margin: auto;
+	margin-top: 1em;
+	width: 40%;
+}

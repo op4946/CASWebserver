@@ -1,4 +1,9 @@
+html {
+	height: 100%;
+}
 body {
 	font-family: sans-serif;
-	background-color: #596878;
+	/*background-image: linear-gradient(to top right, #051937, #004d7a, #008793, #00bf72, #a8eb12);*/
+	/*background-image: linear-gradient(to right top, #006daa, #008fc9, #00adbd, #00c783, #00d902);*/
+	background-image: linear-gradient(to right top, #040810, #17101d, #2c121f, #3d1516, #422101);
 }

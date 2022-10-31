@@ -1,0 +1,21 @@
+	<div class="header">
+		{{if .}}
+		<link rel="stylesheet" href="/pages/header.css">
+
+		<a href="/" style="order:1">Home</a>
+		<a id="saveurl" href="/pages/saveurl" style="order:2">Save URL</a>
+		<form id="search" action="/search" method="GET" style="order:3">
+			<input type="text" name="q" placeholder="Search">
+			<input type="submit" id="searchButton" value="&#x26b2;">
+		</form>
+		<a href="/account" style="order:4">Account</a>
+		<form action="/logout" method="POST" style="order:5">
+			<input type="submit" value="Logout">
+		</form>
+		{{else}}
+		<link rel="stylesheet" href="pages/header_loggedout.css">
+
+		<a href="/login" style="order:1">Login</a>
+		<a href="/newuser" style="order:2">Sign Up</a>
+		{{end}}
+	</div>

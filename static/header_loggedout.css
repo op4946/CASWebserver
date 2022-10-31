@@ -1,0 +1,37 @@
+* {
+	margin: 0;
+}
+
+.header {
+	display: flex;
+	justify-content: right;
+
+	font-size: 1.5rem;
+
+	background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+}
+
+.header a {
+	height: 1em;
+	width: 5em;
+
+	z-index: 99;
+
+	text-align: center;
+
+	padding: .75em;
+	border: 2px solid white;
+	border-radius: .8em;
+
+	margin: .4em .4em;
+
+	text-decoration: none;
+}
+
+.header a:link, a:visited, a:active, #welcome{
+	color: white;	
+}
+
+.header a:hover {
+	background-color: rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+		<meta charset="UTF-8">
+		<title>{{.Username}}'s Page</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/pages/style.css">
+		<link rel="stylesheet" href="/pages/publicUrls.css">
+		
+	</head>
+
+	<body>
+
+{{ template "header.html" .LoggedIn }}
+
+		<div class="col-1">
+			{{if .URLs }}
+			<input type="checkbox" id="btn" checked=true/>
+			<label for="btn">{{.Username}}'s Saved Urls:</label>
+			<div class="urls">
+
+				<ul>
+				{{ range .URLs}}
+				<li>{{ . }}</li> 
+				{{end}}
+				</ul>
+			</div>
+
+			<a href="/saveurl" id="addPlus">+</a>
+			{{else}}
+			<h3>{{.Username}} hasn't saved any URLs yet</h3>
+			{{end}}
+		</div>
+	</body>
+
+</html>

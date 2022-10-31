@@ -4,17 +4,22 @@
 	<head>
 
 		<meta charset="UTF-8">
-		<title>Public URLs</title>
+		<title>Account</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="/pages/style.css">
 		<link rel="stylesheet" href="/pages/publicUrls.css">
 		
 	</head>
 
 	<body>
+
+{{ template "header.html" .LoggedIn }}
+
 		<div class="col-1">
+			<h3>Signed in as {{ .Username }}</h3>
 			{{if .URLs }}
 			<input type="checkbox" id="btn" checked=true/>
-			<label for="btn">Saved Urls:</label>
+			<label for="btn">{{ index .Tags 0 }}</label>
 			<div class="urls">
 
 				<ul>
@@ -23,12 +28,15 @@
 				{{end}}
 				</ul>
 
-				<a href="/saveurl" id="addPlus">+</a>
 			</div>
+
+			<a href="/saveurl" id="addPlus">+</a>
 			{{else}}
 			<h3>No URLs yet</h3>
+			<a href="/saveurl" id="addPlus">+</a>
 			{{end}}
 		</div>
+
 	</body>
 
 </html>
